@@ -10,30 +10,9 @@
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
-    <style>
-      /* Dark Theme */
-      body {
-        background: #000;
-        color: #999;
-        transition: all 1s;
-      }
-      a:hover, a:focus {
-        color: #069;
-        font-weight: initial !important;
-        /* text-decoration: dotted;
-        text-decoration-color: #069;
-        text-decoration-line:underline !important;*/
-      }
-      h1,h2,h3,h4 {
-        font-weight: initial !important;
-        color: #fff !important;
-      }
-      small {
-        font-weight: 100;
-      }
-    </style>
+    <link rel="stylesheet" href="https://phonin.github.io/Layout/stylesheet.css">
   </head>
-  <body>
+  <body id="phonin_document_root">
     <div class="wrapper">
       <header>
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
@@ -65,13 +44,13 @@
       {{ content }}
 
       </section>
-      <footer>
-        {% if site.github.is_project_page %}
-        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-        <p><small>Theme by <a href="https://github.com/orderedlist">orderedlist</a> &mdash; Modified by <a href="https://github.com/0J3">0J3</a></small></p>
-      </footer>
     </div>
+    <footer class="phonin_footer">
+      {% if site.github.is_project_page %}
+      <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+      {% endif %}
+      <p><small>Theme by <a href="https://github.com/orderedlist">orderedlist</a> &mdash; Modified by <a href="https://github.com/0J3">0J3</a></small></p>
+    </footer>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     {% if site.google_analytics %}
     <script>
